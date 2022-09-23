@@ -42,7 +42,7 @@ selection sort:
 #include <stdio.h>
 
 int main() {
-   int vetor[10]={6,12,0,18,11,99,55,45,34,2}, i, j, position, swap, n=10;
+   int vetor[10]={6,12,0,18,11,99,55,45,34,2}, i, j, position, aux, n=10;
  
    for (i = 0; i < (n - 1); i++) {
       position = i;
@@ -51,9 +51,9 @@ int main() {
             position = j;
       }
       if (position != i) {
-         swap = vetor[i];
+         aux = vetor[i];
          vetor[i] = vetor[position];
-         vetor[position] = swap;
+         vetor[position] = aux;
       }
    }
    printf("Array implementado com o selection sort: \n");
