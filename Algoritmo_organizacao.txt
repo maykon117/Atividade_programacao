@@ -4,7 +4,7 @@ bubbler sort:
 
 int main(){
 
-    int arr[50]={6,12,0,18,11,99,55,45,34,2}, num=10, x, y, temp;    
+    int arr[10]={6,12,0,18,11,99,55,45,34,2}, num=10, x, y, temp;    
 
     for(x = 0; x < num - 1; x++){       
 
