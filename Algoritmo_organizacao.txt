@@ -1,0 +1,64 @@
+bubbler sort:
+
+#include <stdio.h>
+
+int main(){
+
+    int arr[50]={6,12,0,18,11,99,55,45,34,2}, num=10, x, y, temp;    
+
+    for(x = 0; x < num - 1; x++){       
+
+        for(y = 0; y < num - x - 1; y++){          
+
+            if(arr[y] > arr[y + 1]){               
+
+                temp = arr[y];
+
+                arr[y] = arr[y + 1];
+
+                arr[y + 1] = temp;
+
+            }
+
+        }
+
+    }
+
+    printf("Array implementado com bubble sort: \n");
+
+    for(x = 0; x < num; x++){
+
+        printf(" %d  ", arr[x]);
+
+    }
+
+    return 0;
+
+}
+=======================================
+
+selection sort:
+
+#include <stdio.h>
+
+int main() {
+   int vetor[10]={6,12,0,18,11,99,55,45,34,2}, i, j, position, swap, n=10;
+ 
+   for (i = 0; i < (n - 1); i++) {
+      position = i;
+      for (j = i + 1; j < n; j++) {
+         if (vetor[position] > vetor[j])
+            position = j;
+      }
+      if (position != i) {
+         swap = vetor[i];
+         vetor[i] = vetor[position];
+         vetor[position] = swap;
+      }
+   }
+   printf("Array implementado com o selection sort: \n");
+   for (i = 0; i < n; i++)
+      
+      printf("%d\t", vetor[i]);
+   return 0;
+}
